@@ -36,6 +36,19 @@
 
 {{ content }}
 
+<hr />
+
+{% if page.twitter_user %}
+<a class="twitter-timeline"
+  href="https://twitter.com/{{ page.twitter_user }}"
+  data-tweet-limit="3"
+  data-chrome="noheader nofooter noborders transparent"
+  data-aria-polite="assertive">
+Tweets by @{{ page.twitter_user }}
+</a>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% endif %}
+
 <hr/>
 
 {% include team_list.html %}
