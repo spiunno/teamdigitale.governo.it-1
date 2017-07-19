@@ -1,0 +1,101 @@
+<header class="Header u-hiddenPrint">
+
+  <div class="Header-banner u-background-50">
+    <div class="Header-owner Headroom-hideme u-flex u-flexJustifyBetween u-flexAlignItemsCenter">
+      <div class="Header-owner__institutions">
+        <div class="u-md-hidden u-lg-hidden u-border-right-xxs u-margin-right-xs u-padding-right-xs u-inlineBlock u-alignMiddle">
+            <a class="js-fr-offcanvas-open u-block" href="#network" aria-controls="network"
+              aria-label="{{ t.toggle_network_menu_label }}" title="{{ t.toggle_network_menu_label }}">
+                {% include slim_icon.html %}
+            </a>
+        </div>
+        <a href="#" class="">Trasformazione Digitale </a>
+
+      <!-- <a href="{{ site.owner_link }}">
+          <span class="u-inline u-md-hidden u-lg-hidden u-sm-hidden">
+            {{ site.owner_short }}
+          </span>
+          <span class="u-hidden u-md-inline u-lg-inline u-sm-inline">
+            {{ site.owner_full }}
+          </span>
+        </a>
+        <span class="u-color-white">&nbsp;+&nbsp;</span>
+
+        <a href="{{ site.partner_link }}" class="current">
+          <span class="u-inline u-md-hidden u-lg-hidden u-sm-hidden">
+            {{ site.partner_short }}
+          </span>
+          <span class="u-hidden u-md-inline u-lg-inline u-sm-inline">
+            {{ site.partner_full }}
+          </span>
+        </a> -->
+    </div>
+    {% include slim_header.html %}
+    </div>
+  </div>
+
+  <div class="Header-navbar u-background-50">
+    <div class="u-layout-wide Grid Grid--alignMiddle u-layoutCenter">
+      <div class="Header-logo-double Grid-cell u-size4of12 u-sm-size3of12 u-md-size2of12 u-lg-size2of12" aria-hidden="true">
+        <a href="{{ '/' | relative_url }}" tabindex="-1">
+          <img src="{{ site.header_logo | default: '/images/loghi/team-logo.svg' }}" alt="">
+        </a>
+      </div>
+
+      <div class="Header-title Grid-cell u-size6of12 u-sm-size7of12 u-md-size6of12 u-lg-size6of12">
+        <h1 class="Header-titleLink">
+          <a href="{{ '/' | relative_url }}">{{ t.site_title | default: site.title | escape }}
+            {% if site.pill %}
+              <span class="u-color-20 u-text-xxs
+              u-alignMiddle u-padding-right-xxs u-padding-left-xxs site-pill">{{ site.pill }}</span>{%
+                endif %}<br><small>{{ t.site_subtitle | default: site.subtitle | escape }}</small></a>
+        </h1>
+      </div>
+
+      {% if include.hasSearch %}
+      <div class="Header-searchTrigger Grid-cell u-size2of12 u-sm-size2of12 u-md-size4of12 u-lg-size4of12">
+        <button aria-controls="header-search" class="js-Header-search-trigger Icon Icon-search u-background-50" title="{{ t.search_form_on }}" aria-label="{{ t.search_form_on }}" aria-hidden="false">
+        </button>
+        <button aria-controls="header-search" class="js-Header-search-trigger Icon Icon-close u-hidden u-background-50" title="{{ t.search_form_off }}" aria-label="{{ t.search_form_off }}" aria-hidden="true">
+        </button>
+      </div>
+      {% endif %}
+
+      <div class="Header-utils Grid-cell u-sm-hidden u-size2of12 u-sm-size2of12 u-md-size4of12 u-lg-size4of12">
+        <div class="Header-social Headroom-hideme">
+          <p>{{ t.follow_us | capitalize }}</p>
+          <ul class="Header-socialIcons">
+
+            {% for social in site.data.social[active_lang] %}
+            <li><a href="{{ social[1].link }}" title="{{ social[1].name }}"><span class="Icon-{{ social[0] }}"></span>
+                <span class="u-hiddenVisually">{{ social[1].name | capitalize }}</span></a></li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        {% if include.hasSearch %}
+        <div class="Header-search" id="header-search">
+          {% include search_form.html %}
+        </div>
+        {% endif %}
+
+      </div>
+
+      <div class="Header-toggle Grid-cell u-sm-size2of12">
+        <a class="Hamburger-toggleContainer js-fr-offcanvas-open u-nojsDisplayInlineBlock u-lg-hidden u-md-hidden" href="#menu" aria-controls="menu" aria-label="{{ t.toggle_menu_label }}" title="{{ t.toggle_menu_label }}">
+          <span class="Hamburger-toggle" role="presentation"></span>
+          <span class="Header-toggleText" role="presentation">Menu</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+  <!-- Header-navbar -->
+
+
+  <div class="Headroom-hideme u-textCenter u-hidden u-sm-hidden u-md-block u-lg-block">
+    <nav class="Megamenu Megamenu--default js-megamenu u-background-50" data-rel=".Offcanvas .Treeview"></nav>
+  </div>
+
+
+</header>

@@ -1,0 +1,24 @@
+it:
+  - title: Missione
+    url: /it/1-content.htm
+  - title: Chi siamo
+    url: /it/47-content.htm
+  - title: Lavora con noi
+    url: /it/36-content.htm
+  - title: Progetti
+    url: '#'
+    liClass: 'Megamenu-item Megamenu-item--vert'
+    subitems:
+    - title: SPID
+      url: /it/spid
+    - title: dati.gov.it
+      url: /it/datigov
+    - title: ANPR
+      url: /it/anpr
+    - title: CIE
+      url: /it/cie
+    - title: Tutti i progetti
+      url: /it/progetti
+      liClass: 'Megamenu-showAll'
+
+en:

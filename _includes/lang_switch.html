@@ -1,5 +1,21 @@
-{% assign pages_in_other_langs = site.pages | where: "ref", page.ref | sort: 'lang' | reverse %}
-{% for linked_page in pages_in_other_langs %}
-  <a href="{{ linked_page.url }}" title="{{ site.data.t.ItalianVersion[page.lang] }}" class="swich-language" style="display:inline-block; border: solid 1px white; padding:0 5px; margin: 0 6px; text-decoration:none; {% if linked_page.lang == page.lang %}color:#06c; background-color:white{% endif %}">{{ linked_page.lang | upcase }}</a>
-{% endfor %}
-&nbsp;
+{% if site.data.l10n.size > 1 %}
+<li>
+<a href="#languages" data-menu-trigger="languages" class="Header-language u-border-none u-zindex-max u-inlineBlock">
+    <span class="u-hiddenVisually">{{ t.active_lang }}:</span>
+    <span class="">{{ site.data.l10n[active_lang].code | upcase }}</span>
+    <span class="Icon Icon-expand u-padding-left-xs"></span>
+  </a>
+</li>
+
+  <div id="languages" data-menu class="Dropdown-menu Header-language-other u-jsVisibilityHidden u-nojsDisplayNone">
+    <span class="Icon-drop-down Dropdown-arrow u-color-white"></span>
+    <ul class="Linklist">
+      {% for lang in site.data.l10n %}
+      <li><a href="{{ '/' | append: lang[0] | relative_url }}"
+        class="u-padding-r-all"><span lang="{{ lang[0] }}">{{ lang[1].name }}</span></a></li>
+      {% endfor %}
+    </ul>
+  </div>
+
+
+{% endif %}

@@ -1,3 +1,4 @@
+
 ---
 certifiedemaillist:
   en: "certified e-mail list"
@@ -78,6 +79,9 @@ Yes:
   en: "Yes"
   it: "Si"
 DigitalTransformationTeam:
+  en: "Digital Transformation Team"
+  it: "Team per la Trasformazione Digitale"
+site_title:
   en: "Digital Transformation Team"
   it: "Team per la Trasformazione Digitale"
 Back:

@@ -1,14 +1,22 @@
-title:
-  it: Team per la Trasformazione Digitale
-  en: Digital Transformation Team
+# SEO
+
+title: Team per la Trasformazione Digitale
+description: Innovazione digitale per i cittadini e per lo sviluppo del Paese
+url: "https://teamdigitale.governo.it"
+author: teamdigitale
 email: info@teamdigitale.governo.it
-description:
-  it: "Innovazione digitale per i cittadini e per lo sviluppo del Paese"
-  en: "Digital innovation for citizens and for the development of the country"
+twitter:
+  username: teamdigitaleIT
+logo: /images/logo_big.png
+lang: it_IT
+
+
+#Custom
 index:
   it:
   en: en/index.html
-url: "https://teamdigitale.governo.it"
+
+baseurl: "" # the subpath of your site, e.g. /blog
 
 #
 # Social links
@@ -24,14 +32,34 @@ linkedin_address: https://www.linkedin.com/company/teamdigitale
 # Medium posts importer
 medium_archive_url: https://medium.com/team-per-la-trasformazione-digitale
 
-# SEO
-logo: /images/logo_big.png
+
+# Custom vars
+theme_color: "#0066cc"
+css_theme: t-Pac
+owner_short: AgID
+owner_full: AgID
+owner_link: http://www.agid.gov.it
+header_logo: /images/loghi/team-logo.svg
+owner_logo: https://www.spid.gov.it/assets/img/agid-logo-bb.svg
+partner_short: Team Digitale
+partner_full: Team Digitale
+partner_link: https://teamdigitale.governo.it
+privacy_link: https://developers.italia.it/it/privacy-policy
+gov_logo: https://teamdigitale.governo.it/images/loghi/governo.svg
+partner_logo: /assets/icons/dt-logo.svg #https://teamdigitale.governo.it/images/loghi/demo.png
+pill: beta
+
+
 
 # Build settings
 markdown: kramdown
 theme: minima
 gems:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+  - jekyll-paginate
+  - jekyll-toc
   - jekyll-sitemap
 exclude:
   - vendor
@@ -42,4 +70,3 @@ exclude:
   - circle.yml
   - gulpfile.js
   - package.json
-  

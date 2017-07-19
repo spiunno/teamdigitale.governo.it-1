@@ -1,0 +1,31 @@
+
+.Header-utils{
+  margin: 0!important;
+}
+.Header-owner__institutions p{
+  color:white;
+}
+.Header-logo-double img {
+  height: auto!important;
+  width: 90%!important;
+}
+.site-pill{
+  display: inline-block;
+  width: 1px;
+  overflow: visible;
+}
+// @media screen and (max-width: 688px) {
+//   .Header-titleLink a {
+//     font-size: 2rem !important;
+//   }
+// }
+@media screen and (min-width: 689px) {
+  .Header-titleLink a {
+    font-size: 3rem !important;
+  }
+}
+@media screen and (min-width: 992px) {
+  .Header-titleLink a {
+    font-size: 3rem !important;
+  }
+}

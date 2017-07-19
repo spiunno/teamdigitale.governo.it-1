@@ -1,0 +1,16 @@
+it:
+  twitter:
+    name: twitter
+    link: https://twitter.com/teamdigitaleIT
+    sharelink: https://twitter.com/intent/tweet?url=<url>
+  medium:
+    name: medium
+    link: https://medium.com/team-per-la-trasformazione-digitale/
+en:
+  twitter:
+    name: twitter
+    link: https://twitter.com/ITdigitalteam
+    sharelink: https://twitter.com/intent/tweet?url=<url>
+  medium:
+    name: medium
+    link: https://medium.com/team-per-la-trasformazione-digitale/tagged/english-language

@@ -15,6 +15,11 @@ class MediumImporter < Jekyll::Generator
   priority :high
   def generate(site)
 
+    jekyll_coll = Jekyll::Collection.new(site, 'medium_feed')
+    jekyll_coll.docs = []
+
+    return
+
     feed_url = Jekyll.configuration({})['medium_archive_url']
     puts "[*] Fetching Medium feed from: " + feed_url
 
